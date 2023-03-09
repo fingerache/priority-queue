@@ -1,0 +1,40 @@
+use('test')
+
+// db.users.aggregate([{
+//     "$sample": {
+//         size: 1
+//     }
+// }])
+
+// db.contacts.insertOne({
+//   "user_id": {
+//     "$oid": "6408aabc512a94f91eab11f9"
+//   },
+//   "full_name": "Ratul Mahato",
+//   "email": "ratul.mahato@example.com",
+// })
+
+// use('queue'); db.pQueueConfig.remove({})
+// db.pQueueConfig.insertOne({
+//     topic: "default",
+//     fields: [
+//         {
+//             field: "cdate",
+//             type: "datetime",
+//             conv: "epochSec",
+//             order: "desc",
+//             max: 4102358400
+//         },
+//         {
+//             field: "authority",
+//             type: "int",
+//             conv: "int",
+//             order: "desc",
+//             max: 100
+//         }
+//     ]
+// })
+
+use('queue')
+// use('queue'); db.pQueue.remove({})
+db.pQueue.find()

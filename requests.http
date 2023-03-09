@@ -1,0 +1,60 @@
+
+### ping 
+
+GET http://localhost:4000/ping
+
+### /crm/contact
+
+GET http://localhost:4000/crm/contact
+
+###
+
+GET http://localhost:4000/crm/contacts
+
+###
+
+GET http://localhost:4000/crm/contact?id=6408aabc512a94f91eab11f9
+
+###
+PUT http://localhost:4000/crm/contact
+Content-Type: application/json
+
+{
+    "id": "123",
+    "name": "Srinath",
+    "description": "Some Guy in his room learning Node and Express"
+}
+
+###
+POST http://localhost:4000/crm/contact
+Content-Type: application/json
+
+{
+    "user_id": {},
+    "full_name": "chris rock",
+    "email": "chris.rock@smithslap.com"
+}
+
+####===================================-==========================================
+
+####
+
+GET http://localhost:4000/queue/priority?topic=default
+
+####
+
+POST http://localhost:4000/queue/priority
+Content-Type: application/json
+
+{
+    "data":  {
+        "cdate": "2002-11-22T01:11:20",
+        "authority": 24,
+        "msg": "heelo beta ji"
+    },
+    "topic": "default"
+}
+
+####
+
+DELETE http://localhost:4000/queue/priority?topic=default
